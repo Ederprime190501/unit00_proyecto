@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit00 | Casa de Empeño 2021</title>
+
+    <!--ESTILOS DE BOOTSTRAP Y FONTAWESOME-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    
+    <!--ESTILOS ANIMATE, ESTILOS, TABS-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabs.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="border border-primary rounded-pill" style="width: 110px; margin: auto; margin-left: 20px;" src="img/unit00_logo.png"/>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">Unit00</span>
+                                <span class="text-muted text-xs block">Casa de Empeño <b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="#">Acerca</a></li>
+                                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            UNIT
+                        </div>
+                    </li>
+                    <li>
+                        <a href="home.html"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="aperturaOperaciones.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Operaciones</span> <span class="fa arrow"></span></a>
+
+                        <ul class="nav nav-second-level">
+                            <li><a href="operacionesBuscar.html"> Buscar Operaciones</a></li>
+                            <li><a href="aperturaOperaciones.html"> Apertura</a></li>
+                            <li><a href="cierreOperaciones.html"> Cierre</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">Inventarios</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Agregar Producto</a></li>
+                            <li><a href="#">Borrar Producto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li style="padding: 20px">
+                                <span class="fa fa-user"></span>
+                                <span class="m-r-sm text-muted">Eder German Marquez Sanchez</span>
+                            </li>
+                            <li style="padding: 20px">
+                                <span class="fa fa-building"></span>
+                                <span class="m-r-sm text-muted">Cholula Puebla 12 </span>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-sign-out"></i> Salir
+                                </a>
+                            </li>
+                    </ul>
+                </nav>
+            </div><br>
+            <!--SECCION DE inicio-->
+            <div class="contenido">
+                <h1 class="text-success font-weight-bold titulo"> Casa de Empeño Unit00 S.A.S 2021</h1>
+            </div>
+            <div class="container">
+                <div class="card-deck mb-3 text-center">
+                  <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Buscar Operaciones</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/gallery/buscar.png" alt="">
+                      <button type="button" onclick="location.href='operacionesBuscar.html'" class="btn btn-lg btn-block btn-primary">Buscar Operaciones</button>
+                    </div>
+                  </div>
+                  <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Apertura</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/gallery/apertura.png" style="height: 150px; margin-bottom: 30px;" alt="">
+                      <button type="button" onclick="location.href='aperturaOperaciones.html'" class="btn btn-lg btn-block btn-primary">Operaciones de Apertura</button>
+                    </div>
+                  </div>
+                  <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Cierre</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/gallery/cierre.png" style="height: 150px; margin-bottom: 30px; width: 250px;" alt="">
+                      <button type="button" onclick="location.href='cierreOperacioneshtml'" class="btn btn-lg btn-block btn-primary">Operaciones de Cierre</button>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="card-deck mb-3 text-center">
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Buscar Productos</h4>
+                      </div>
+                      <div class="card-body">
+                        <img src="img/gallery/buscar2.png" style="height: 200px; margin-bottom: 25px;" alt="">
+                        <button type="button" onclick="location.href='#'" class="btn btn-lg btn-block btn-primary">Buscar Productos</button>
+                      </div>
+                    </div>
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Agregar Producto</h4>
+                      </div>
+                      <div class="card-body">
+                        <img src="img/gallery/agregar.png" alt="">
+                        <button type="button" onclick="location.href='#'" class="btn btn-lg btn-block btn-primary">Agregar</button>
+                      </div>
+                    </div>
+                    <div class="card mb-4 box-shadow">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Borrar Producto</h4>
+                      </div>
+                      <div class="card-body">
+                        <img src="img/gallery/borrar.png" alt="">
+                        <button type="button" onclick="location.href='#'" class="btn btn-lg btn-block btn-primary">Borrar</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+            <!--FOOTER-->
+            <div class="footer">
+                <div class="float-right">
+                </div>
+                <div>
+                    <strong>Copyright</strong> Unit00 S.A.S &copy; 2021
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPTS BOOTSTRAP-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="https://kit.fontawesome.com/a7f7297dc4.js" crossorigin="anonymous"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+</body>
+
+</html>

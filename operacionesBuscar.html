@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit00 | Casa de Empeño 2021</title>
+
+    <!--ESTILOS DE BOOTSTRAP Y FONTAWESOME-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/plugins/datapicker/datepicker3.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/plugins/dataTables/datatables.min.css">
+    <script language="JavaScript" src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script language="JavaScript" src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script language="JavaScript" src="https://cdn.datatables.net/plug-ins/3cfcc339e89/integration/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script>
+    
+    <!--ESTILOS ANIMATE, ESTILOS, TABS-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabs.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="border border-primary rounded-pill" style="width: 110px; margin: auto; margin-left: 20px;" src="img/unit00_logo.png"/>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">Unit00</span>
+                                <span class="text-muted text-xs block">Casa de Empeño <b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="#">Acerca</a></li>
+                                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            UNIT
+                        </div>
+                    </li>
+                    <li>
+                        <a href="home.html"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="aperturaOperaciones.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Operaciones</span> <span class="fa arrow"></span></a>
+
+                        <ul class="nav nav-second-level">
+                            <li><a href="operacionesBuscar.html"> Buscar Operaciones</a></li>
+                            <li><a href="aperturaOperaciones.html"> Apertura</a></li>
+                            <li><a href="cierreOperaciones.html"> Cierre</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">Inventarios</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Agregar Producto</a></li>
+                            <li><a href="#">Borrar Producto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li style="padding: 20px">
+                                <span class="fa fa-user"></span>
+                                <span class="m-r-sm text-muted">Eder German Marquez Sanchez</span>
+                            </li>
+                            <li style="padding: 20px">
+                                <span class="fa fa-building"></span>
+                                <span class="m-r-sm text-muted">Cholula Puebla 12 </span>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-sign-out"></i> Salir
+                                </a>
+                            </li>
+                    </ul>
+                </nav>
+            </div><br>
+            <!--SECCION DEL DATEPICKER-->
+            <div class="container" style="text-align: center;">
+                <h2 class="font-weight-bold">Busqueda de Operaciones</h2>
+            </div>
+            <div class="container">
+                <form action="#">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <h3 class="font-weight-bold">Fecha Inicio</h3>
+                            <div class='input-group date' id='datepicker1'>
+                                <input type='text' name="date" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <h3 class="font-weight-bold">Fecha Inicio</h3>
+                            <div class='input-group date' id='datepicker2'>
+                                <input type='text' name="date" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div><br><br><br>
+                        <button class="btn btn-primary p-2 w-10"> Buscar</button>
+                    </div>
+                    
+                </div>
+            </form>
+            </div>
+            <!--SECCION DE TABLA CON DATATABLES-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="table-responsive">  
+                          <table id="mytable" class="table table-bordred table-striped">
+                               <thead>
+                                    <th>Operaciones</th>
+                                    <th>Apertura</th>
+                                    <th>Cierre</th>
+                               </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Operaciones</th>
+                                    <th>Apertura</th>
+                                    <th>Cierre</th>
+                                </tr>
+                            </tfoot> 
+                <tbody>
+                <tr>
+                <td>Caja</td>
+                <td>2021-08-03</td>
+                <td>2021-08-05</td>
+                </tr>
+             <tr>
+                <td>Cajero Automatico</td>
+                <td>2021-08-03</td>
+                <td>2021-08-05</td>
+                </tr>  
+             <tr>
+                <td>Boveda</td>
+                <td>2021-08-03</td>
+                <td>2021-08-05</td>
+                </tr>
+                </tbody> 
+                   
+            </table>
+            
+            <div class="clearfix"></div>
+            <ul class="pagination pull-right">
+              <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--FOOTER-->
+            <div class="footer">
+                <div class="float-right">
+                </div>
+                <div>
+                    <strong>Copyright</strong> Unit00 S.A.S &copy; 2021
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPTS BOOTSTRAP-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="https://kit.fontawesome.com/a7f7297dc4.js" crossorigin="anonymous"></script>
+    <script src="js/tables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit00 | Casa de Empeño 2021</title>
+
+    <!--ESTILOS DE BOOTSTRAP Y FONTAWESOME-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/output.css">
+    
+    <!--ESTILOS ANIMATE, ESTILOS, TABS-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="border border-primary rounded-pill" style="width: 110px; margin: auto; margin-left: 20px;" src="img/unit00_logo.png"/>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">Unit00</span>
+                                <span class="text-muted text-xs block">Casa de Empeño <b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="#">Acerca</a></li>
+                                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            UNIT
+                        </div>
+                    </li>
+                    <li>
+                        <a href="home.html"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="aperturaOperaciones.html"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Operaciones</span> <span class="fa arrow"></span></a>
+
+                        <ul class="nav nav-second-level">
+                            <li><a href="operacionesBuscar.html"> Buscar Operaciones</a></li>
+                            <li><a href="aperturaOperaciones.html"> Apertura</a></li>
+                            <li><a href="cierreOperaciones.html"> Cierre</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">Inventarios</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Agregar Producto</a></li>
+                            <li><a href="#">Borrar Producto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li style="padding: 20px">
+                                <span class="fa fa-user"></span>
+                                <span class="m-r-sm text-muted">Eder German Marquez Sanchez</span>
+                            </li>
+                            <li style="padding: 20px">
+                                <span class="fa fa-building"></span>
+                                <span class="m-r-sm text-muted">Cholula Puebla 12 </span>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-sign-out"></i> Salir
+                                </a>
+                            </li>
+                    </ul>
+                </nav>
+            </div><br>
+            <div class="menu">
+                <a href="home.html" class="operacion">Operaciones</a><a href="#"> | </a><a class="cierre" href="Apertura.html">Cierre</a><br><br>
+            </div>
+            <!--SECCION DE TABS-->
+            <nav>
+              <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active fa fa-box" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> Cierre de Caja</a>
+                <a class="nav-item nav-link fa fa-credit-card" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Cierre de Cajero</a>
+                <a class="nav-item nav-link fa fa-lock" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"> Cierre de Boveda</a>
+              </div>
+            </nav>
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+              <!--SECCION DEL PRIMER TAB-->
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container">
+                  <form action="javascript:procesar()" id="forma">
+                      <div class="row">
+                          <div class="col">
+                              <h2 class="font-weight-bold">Monedas</h2>
+                              <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda1" autofocus required step="any" placeholder="0.05 centavos">
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda2" autofocus required step="any" placeholder="0.10 centavos">
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda3" autofocus required step="any" placeholder="0.50 centavos">
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda4" autofocus required step="any" placeholder="1.00 pesos">
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda5" autofocus required step="any" placeholder="2.00 pesos">
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda6" autofocus required step="any" placeholder="5.00 pesos">
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda7" autofocus required step="any" placeholder="10.00 pesos">
+                                </div>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="moneda8" autofocus required step="any" placeholder="20.00 pesos">
+                                </div>
+                                
+                          </div>
+                          <div class="col">
+                              <h2 class="font-weight-bold">Billetes</h2>
+                              <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="billete1" autofocus required step="any" placeholder="20.00 pesos">
+                              </div>
+                              <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="billete2" autofocus required step="any" placeholder="50.00 pesos">
+                              </div>
+                              <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="billete3" autofocus required step="any" placeholder="100.00 pesos">
+                              </div>
+                              <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="billete4" autofocus required step="any" placeholder="200.00 pesos">
+                              </div>
+                              <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="billete5" autofocus required step="any" placeholder="500.00 pesos">
+                              </div>
+                              <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                  </div>
+                                  <input type="number" class="form-control" id="billete6" autofocus required step="any" placeholder="1000.00 pesos">
+                              </div>
+                              </div>
+                              <div class="col" style="margin-top: 10%;">
+                                  <label>
+                                    <h3>Billetes: <br><br><output id="salidaBilletes" ></output></h3><br>
+                                    <h3>Monedas: <br><br><output id="salidaMonedas"></output></h3><br>
+                                    <h3>Total: <br><br><output id="salidaTotal"></output></h3>
+                                  </label>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary" style="float: right; margin-left: 10px;">Guardar</button>
+                      </form>
+                      <form action="javascript:vaciar()" style="float: right;">
+                          <button type="submit" class="btn btn-success">Limpiar</button>
+                          </form>
+                      </div><br><br><br><br><br>
+              </div>
+              <!--SECCION DEL SEGUNDO TAB-->
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="container">
+                  <form id="formulario" action="javascript:proceso()">
+                    <div class="row">
+                      <div class="col">
+                        <h2 class="font-weight-bold">Monedas</h2>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins1" autofocus required placeholder="0.05 centavos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins2" autofocus required placeholder="0.10 centavos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins3" autofocus required placeholder="0.50 centavos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins4" autofocus required placeholder="1.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins5" autofocus required placeholder="2.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins6" autofocus required placeholder="5.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins7" autofocus required placeholder="10.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coins8" autofocus required placeholder="20.00 pesos">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <h2 class="font-weight-bold">Billetes</h2>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="tickets1" autofocus required placeholder="20.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="tickets2" autofocus required placeholder="50.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="tickets3" autofocus required placeholder="100.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="tickets4" autofocus required placeholder="200.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="tickets5" autofocus required placeholder="500.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="tickets6" autofocus required placeholder="1000.00 pesos">
+                        </div>
+                      </div>
+                      <div class="col" style="margin-top: 10%;">
+                        <label>
+                          <h3>Billetes: <br><br><output id="Billetes" ></output></h3><br>
+                          <h3>Monedas: <br><br><output id="Monedas"></output></h3><br>
+                          <h3>Total: <br><br><output id="Total"></output></h3>
+                        </label>
+                  </div>
+                    </div>
+                    <button type="submit" style="float: right; margin-left: 10px;" class="btn btn-primary">Guardar</button>
+                  </form>
+                  <form action="javascript:limpiar()" style="float: right;">
+                    <button class="btn btn-success">Limpiar</button><br><br><br><br><br>
+                    </form>
+                </div>
+                </div>
+                <!--SECCION DEL TERCER TAB-->
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="container">
+                  <form action="javascript:form()" id="formularios">
+                    <div class="row">
+                      <div class="col">
+                        <h2 class="font-weight-bold">Monedas</h2>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin1" autofocus required placeholder="0.05 centavos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin2" autofocus required placeholder="0.10 centavos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin3" autofocus required placeholder="0.50 centavos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin4" autofocus required placeholder="1.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin5" autofocus required placeholder="2.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin6" autofocus required placeholder="5.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin7" autofocus required placeholder="10.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="coin8" autofocus required placeholder="20.00 pesos">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <h2 class="font-weight-bold">Billetes</h2>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="ticket1" autofocus required placeholder="20.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="ticket2" autofocus required placeholder="50.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="ticket3" autofocus required placeholder="100.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="ticket4" autofocus required placeholder="200.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="ticket5" autofocus required placeholder="500.00 pesos">
+                        </div>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="number" class="form-control" id="ticket6" autofocus required placeholder="1000.00 pesos">
+                        </div>
+                      </div>
+                      <div class="col" style="margin-top: 10%;">
+                        <label>
+                          <h3>Billetes: <br><br><output id="Billetes2" ></output></h3><br>
+                          <h3>Monedas: <br><br><output id="Monedas2"></output></h3><br>
+                          <h3>Total: <br><br><output id="Total2"></output></h3>
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" style="float: right; margin-left: 10px;" class="btn btn-primary">Guardar</button>
+                  </form>
+                  <form action="javascript:clear()" style="float: right;">
+                    <button class="btn btn-success">Limpiar</button><br><br><br><br><br>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <!--FOOTER-->
+            <div class="footer">
+                <div class="float-right">
+                </div>
+                <div>
+                    <strong>Copyright</strong> Unit00 S.A.S &copy; 2021
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPTS BOOTSTRAP-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="https://kit.fontawesome.com/a7f7297dc4.js" crossorigin="anonymous"></script>
+    <script src="js/plugins/bignumber.js/bignumber.min.js"></script>
+    <script src="js/plugins/numeral.js/numeral.min.js"></script>
+    <script src="js/funcion.js"></script>
+    <script src="js/proceso.js"></script>
+    <script src="js/procesar.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+</body>
+
+</html>
